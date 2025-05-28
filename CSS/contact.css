@@ -1,0 +1,138 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Navegación Principal */
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+/* Títulos */
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Grid de Contacto */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Tarjeta de contacto con tamaño uniforme */
+.contact-card {
+    background-color: var(--blanco);
+    box-shadow: 0 5px 15px rgba(112,112,112,0.3);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 280px; /* Altura uniforme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(112,112,112,0.5);
+}
+
+/* Iconos */
+.contact-card i {
+    font-size: 4.5rem;
+    color: var(--secundario);
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-card i:hover {
+    color: var(--primario);
+    transform: scale(1.2);
+}
+
+/* Texto de contacto */
+.contact-card p, 
+.contact-card a {
+    font-size: 1.8rem;
+    color: var(--oscuro);
+    margin: 0;
+    word-wrap: break-word;
+    text-decoration: none;
+    display: block;
+}
+
+.contact-card a:hover {
+    color: var(--primario);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--secundario);
+    color: var(--blanco);
+    font-size: 1.6rem;
+}
